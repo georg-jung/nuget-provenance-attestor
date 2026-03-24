@@ -732,17 +732,8 @@
   <div class="card">
     <div class="card-title"><span class="dot"></span>Package Source</div>
     <div class="tabs">
-      <button class="tab" data-tab="upload" onclick="switchTab('upload')">Upload .nupkg</button>
       <button class="tab active" data-tab="fetch" onclick="switchTab('fetch')">Fetch from NuGet.org</button>
-    </div>
-
-    <div id="panel-upload" class="tab-panel">
-      <div class="drop-zone" id="drop-zone">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
-        <p>Drop a <strong>.nupkg</strong> file here or click to browse</p>
-        <div class="filename" id="upload-filename"></div>
-        <input type="file" accept=".nupkg" id="file-input" onchange="handleFileSelect(this)">
-      </div>
+      <button class="tab" data-tab="upload" onclick="switchTab('upload')">Upload .nupkg</button>
     </div>
 
     <div id="panel-fetch" class="tab-panel active">
@@ -762,6 +753,15 @@
           </div>
           <div class="ver-badge" id="ver-badge"></div>
         </div>
+      </div>
+    </div>
+
+    <div id="panel-upload" class="tab-panel">
+      <div class="drop-zone" id="drop-zone">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+        <p>Drop a <strong>.nupkg</strong> file here or click to browse</p>
+        <div class="filename" id="upload-filename"></div>
+        <input type="file" accept=".nupkg" id="file-input" onchange="handleFileSelect(this)">
       </div>
     </div>
 
