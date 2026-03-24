@@ -88,6 +88,29 @@
     max-width: 520px;
     margin-inline: auto;
   }
+  .header-links {
+    margin-top: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: 0.74rem;
+  }
+  .header-links a,
+  .site-footer a {
+    color: var(--blue);
+    text-decoration: none;
+  }
+  .header-links a:hover,
+  .site-footer a:hover {
+    text-decoration: underline;
+  }
+  .header-links .sep {
+    color: var(--border-focus);
+    opacity: 0.45;
+  }
   /* ── Cards ── */
   .card {
     background: var(--bg-card);
@@ -639,6 +662,33 @@
     color: var(--text-dim);
     margin-top: 0.3rem;
   }
+  .site-footer {
+    margin-top: 1.25rem;
+    padding: 0.95rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: rgba(19,22,31,0.78);
+    color: var(--text-dim);
+    font-size: 0.76rem;
+    line-height: 1.65;
+  }
+  .site-footer strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .site-footer code {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--text-bright);
+  }
+  .site-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 0.55rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+  }
 </style>
 </head>
 <body>
@@ -652,6 +702,9 @@
     </div>
     <h1>NuGet Provenance Verifier</h1>
     <p>Verify GitHub build provenance attestations for NuGet packages. Removes the nuget.org repository signature, recomputes the digest, and queries GitHub's attestation API.</p>
+    <div class="header-links">
+      <a href="https://github.com/georg-jung/nuget-provenance-verifier" target="_blank" rel="noopener noreferrer">View project on GitHub</a>
+    </div>
   </header>
 
   <!-- Auth Card -->
@@ -733,6 +786,18 @@
       <div class="log" id="log"></div>
     </div>
   </div>
+
+  <footer class="site-footer">
+    <strong>About this page:</strong> this published <code>index.html</code> comes from the
+    <a href="https://github.com/georg-jung/nuget-provenance-verifier" target="_blank" rel="noopener noreferrer">georg-jung/nuget-provenance-verifier</a>
+    repository. Its release workflow stages <code>site/index.html</code>, creates a GitHub provenance attestation for that file, and then deploys it to GitHub Pages.
+    To verify a local copy, use <code>gh attestation verify index.html --repo georg-jung/nuget-provenance-verifier</code>.
+    <div class="site-footer-links">
+      <a href="https://github.com/georg-jung/nuget-provenance-verifier/blob/main/.github/workflows/pages.yml" target="_blank" rel="noopener noreferrer">Pages Workflow</a>
+      <a href="https://github.com/georg-jung/nuget-provenance-verifier/attestations" target="_blank" rel="noopener noreferrer">Repo Attestations</a>
+      <a href="https://github.com/georg-jung/nuget-provenance-verifier/releases" target="_blank" rel="noopener noreferrer">Published Releases</a>
+    </div>
+  </footer>
 </div>
 
 <script>
