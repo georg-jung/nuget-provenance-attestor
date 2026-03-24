@@ -1044,7 +1044,7 @@ async function fetchNupkg(pkgId, version) {
 
 // ─── GitHub API headers ───
 function ghHeaders() {
-  const h = { 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2026-03-10' };
+  const h = { 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
   const token = getToken();
   if (token) h['Authorization'] = `Bearer ${token}`;
   return h;
