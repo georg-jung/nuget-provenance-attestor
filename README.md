@@ -1,8 +1,8 @@
-# NuGet Provenance Attestor
+# NuGet Provenance Verifier
 
 Lightweight browser-based tool for checking GitHub build provenance attestations for NuGet packages.
 
-![NuGet Provenance Attestor screenshot](./screenshot.png)
+![NuGet Provenance Verifier screenshot](./screenshot.jpg)
 
 It removes the `nuget.org` repository signature from a `.nupkg`, recomputes the digest, and looks up matching attestations through GitHub's attestation API.
 
