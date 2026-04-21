@@ -1,1 +1,1 @@
-FROM ghcr.io/validator/validator:latest@sha256:457f06f6812787d1d85cfdf831b7c3c5200f90e1e77dfb3f216f488960573432
+FROM ghcr.io/validator/validator:latest@sha256:59b0e97e2664755f1597ba9b6a0ecbdc4c67bd1518d1318acd29d9a08900389b
